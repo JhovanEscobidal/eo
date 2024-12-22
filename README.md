@@ -1,7 +1,7 @@
-<img alt="logo" src="https://www.objectionary.com/cactus.svg" height="100px" />
+<img> alt="logo" src="https://www.objectionary.com/cactus.svg" height="100px" />
 
-[![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
-[![DevOps By Rultor.com](http://www.rultor.com/b/objectionary/eo)](http://www.rultor.com/p/objectionary/eo)
+EO principles respected here. https://www.elegantobjects.org/badge.svg. https://www.elegantobjects.org.
+DevOps By Rultor.com   http://www.rultor.com/b/objectionary/eo)](http://www.rultor.com/p/objectionary/eo)
 [![We recommend IntelliJ IDEA](https://www.elegantobjects.org/intellij-idea.svg)](https://www.jetbrains.com/idea/)
 
 [![mvn-linux](https://github.com/objectionary/eo/actions/workflows/mvn.yml/badge.svg)](https://github.com/objectionary/eo/actions/workflows/mvn.yml)
@@ -318,7 +318,7 @@ mvn clean install -Pqulice
 You will need [Maven 3.3+](https://maven.apache.org) and Java 11+ installed.
 
 ## Special thanks
-
+|
 We are using the [YourKit Java Profiler](https://www.yourkit.com/java/profiler)
 to enhance the performance of EO components:
 
