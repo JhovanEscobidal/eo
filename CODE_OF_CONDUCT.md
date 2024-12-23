@@ -126,4 +126,4 @@ Community Impact Guidelines were inspired by
 For answers to common questions about this code of conduct, see the
 [FAQ](https://www.contributor-covenant.org/faq).
 Translations are available
-[https://www.contributor-covenant.org/translations](here).
+[https://www.contributor-covenant.org/translations](JHOVAN).
