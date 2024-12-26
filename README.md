@@ -1,10 +1,10 @@
-<img alt="logo" src="https://www.objectionary.com/cactus.svg" height="100px" />
-
+<iAM alt="logo" src="https://www.objectionary.com/cactus.svg" height="100px" />
+> JHOVAN D ESCOBIDAL 
 [![EO principles respected here](https://www.elegantobjects.org/badge.svg)](https://www.elegantobjects.org)
 [![DevOps By Rultor.com](http://www.rultor.com/b/objectionary/eo)](http://www.rultor.com/p/objectionary/eo)
 [![We recommend IntelliJ IDEA](https://www.elegantobjects.org/intellij-idea.svg)](https://www.jetbrains.com/idea/)
-
-[![mvn-linux](https://github.com/objectionary/eo/actions/workflows/mvn.yml/badge.svg)](https://github.com/objectionary/eo/actions/workflows/mvn.yml)
+<< --"Jhovan Escobidal" -->
+[maven-linux](https://github.com/objectionary/eo/actions/workflows/mvn.yml/badge.svg)](https://github.com/objectionary/eo/actions/workflows/mvn.yml)
 [![PDD status](http://www.0pdd.com/svg?name=objectionary/eo)](http://www.0pdd.com/p?name=objectionary/eo)
 [![Maintainability](https://api.codeclimate.com/v1/badges/eaede7d027b1d9411a76/maintainability)](https://codeclimate.com/github/objectionary/eo/maintainability)
 [![Maven Central](https://img.shields.io/maven-central/v/org.eolang/eo-parent.svg)](https://maven-badges.herokuapp.com/maven-central/org.eolang/eo-parent)
@@ -56,126 +56,126 @@ All of them have something **we don't tolerate**:
 * operators
 * traits and mixins
   ([why?](https://www.yegor256.com/2017/03/07/traits-and-mixins.html))
-* flow control statements (`for`, `while`, `if`, etc)
+* flow control statements for, while, if or etc.
 * [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)
   ([why?](https://github.com/objectionary/eo/issues/51))
 
 ## Quick Start
 
-First, install [Java SE](https://www.oracle.com/java/technologies/downloads/),
+First, install [Java SE] https://www.oracle.com/java/technologies/downloads/
 [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
 Then, you install [eoc](https://github.com/objectionary/eoc):
 
-```bash
+bash
 npm install -g eolang@0.28.0
-```
 
-Then, start with a simple EO program in the `app.eo` file:
 
-```eo
+Then, start with a simple EO program in the apps en language 
+
+en language
 # Just prints hello.
-[args] > app
-  QQ.io.stdout > @
-    "Hello, world!\n"
-```
+[arguments] > apps
+  io.standout > @
+    "Hello, world! 
 
-Compile it like this (may take up to a minute or so):
 
-```bash
-eoc --easy link
-```
+Compile it like this (may take up to a minute or so)
+
+bash
+en language < --easy link -- >
+
 
 Then, run it:
 
-```bash
-eoc --easy --alone dataize app
-```
+bash
+en language < --easy --alone dataize apps >
+
 
 You should see "Hello, world!" printed.
 
 ## Simple Tutorial
 
 In the example above, we create a new
-[abstract object](https://www.yegor256.com/2020/12/01/abstract-objects.html)
-named `app`, which has got a single attribute named `@`. The object
-attached to the attribute `@` is a copy of the object `stdout` with
-a single argument `"Hello, world!"`. The object
-`stdout` is also
-[abstract](https://www.yegor256.com/2020/12/01/abstract-objects.html).
-It can't be used directly, a copy of it has to be created,
+abstract object
+@ https://www.yegor256.com/2020/12/01/abstract/objects.html
+named app which has got a single attribute named @ The object
+attached to the attribute  is a copy of the object stdout with
+a single argument "Hello, world!". The object
+stand out is also
+abstract https://www.yegor256.com/2020/12/01/abstract/objects.html
+It can't be used directly, a copy of it, if has to be created 
 with a few requirement arguments provided.
-This is how a copy of the object `stdout` is made:
+This is how a copy of the object stand out is made:
 
-```eo
-QQ.io.stdout
-  "Hello, world!\n"
-```
+en language
+QQ.io.stand out
+  "Hello, world! <n>
+
 
 The indentation in EO is important, just like in Python.
 There have to be two spaces
 in front of the line in order to go to the deeper level of nesting.
 This code can also be written in a "horizontal" notation:
 
-```eo
+en language
 QQ.io.stdout "Hello, world!"
-```
+…
 
 Moreover, it's possible to use brackets in order to group arguments and avoid
 ambiguity. For example, instead of using a plain string `"Hello, world!"`
 we may want to create a copy of the object `stdout` with a more complex
 argument: a copy of the object `sprintf`:
 
-```eo
-# Says hello to Jeff.
+en languge
+# Says hello to Jeffery
 [] > app
   QQ.io.stdout > @
     QQ.txt.sprintf
       "Hello, %s!"
       * "Jeffrey"
-```
+
 
 Here, the object `sprintf` is also
 [abstract](https://www.yegor256.com/2020/12/01/abstract-objects.html).
 It is being copied with two arguments: `"Hello, %s!"` and `"Jeffrey"`.
 This program can be written using horizontal notation:
 
-```eo
+en language
 +alias org.eolang.io.stdout
 +alias org.eolang.txt.sprintf
 
 # Also says hello to Jeff.
 [] > app
   (stdout (sprintf "Hello, %s!" (* "Jeffrey"))) > @
-```
 
-The special attribute `@` denotes an object that is being
-[decorated](https://www.yegor256.com/2015/02/26/composable-decorators.html).
-In this example, the object `app` decorates the copy of the
-object `stdout` and through this starts to behave like
-the object `stdout`: all attributes of `stdout` become the
-attributes of the `app`. The object `app` may have its own
+
+The special attribute denotes an object that is being
+decorated. [] https://www.yegor256.com/2015/02/26/composable-decorators.html
+In this example, the object apps decorates the copy of the
+object standout and through this starts to behave like
+the object and  all attributes of standout become the
+attributes of the apps. The object apps may have its own
 attributes. For example, it's possible to define a new abstract object
-inside `app` and use it to build the output string:
+inside apps and use it to build the output string:
 
-```eo
-# Says hello to Jeff.
-[] > app
-  QQ.io.stdout (msg "Jeffrey") > @
-  [name] > msg
-    QQ.txt.sprintf "Hello, %s!" (* name) > @
-```
+en language
+# Says hello to Jeffery
+[iAM] > apps
+  io.standout message to Jeffery
+  [JHOVAN D ESCOBIDAL] > message
+    context.sprintf "Hello world" name @
 
-Now, the object `app` has two "bound" attributes: `@` and `msg`. The attribute
-`msg` has an abstract object attached to it, with a single "free" attribute
-`name`.
 
+Now, the object apps has two boun attributes. @ and message. The attribute
+message has an abstract object attached to it, with a single attribute @
+name : — JHOVAN D ESCOBIDAL
 This is how you iterate:
 
-```eo
-# Multiplication table.
-[args] > app
+en language
+# Multiplication table 
+[argument] > app
   malloc.for > @
-    0
+    1
     [x] >>
       seq > @
         *
@@ -195,23 +195,23 @@ This is how you iterate:
                   ^.x.put
                     ^.x.as-number.plus 1
           true
-```
+
 
 This code will print this:
 
-```text
+context:
 2 x 2 = 4
 3 x 3 = 9
 4 x 4 = 16
 5 x 5 = 25
-```
+
 
 Got the idea?
 
 ## Backus-Naur Form
 
 This is our
-[EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form),
+[EBNF](https://en.wikipedia.org/wiki/Extended (Backus%E2%80%93Naur_form),
 of EO language:
 
 <img alt="ENBF of EO" src="https://www.eolang.org/ebnf/Eo.png" width="100%" />
@@ -256,12 +256,12 @@ Read about integration with Maven,
 ## Benchmark
 
 This is how many milliseconds were spent on different
-XSL stylesheets during the execution of `mvn install` of
-the `eo-runtime` module:
+xsl. stylesheets during the execution of mvn install of
+the eo-runtime module:
 
-<!-- benchmark_begin -->
+< -- benchmark_begin -- >
 
-```text
+context
 to-java.xsl                          68374  32.24%
 add-refs.xsl                         24572  11.59%
 set-locators.xsl                     12709  5.99%
@@ -278,7 +278,7 @@ cti-adds-errors.xsl                  5062   2.39%
 normalize-bytes.xsl                  4395   2.07%
 expand-qqs.xsl                       4345   2.05%
 atoms-with-bound-attrs.xsl           4342   2.05%
-```
+
 
 The results were calculated in [this GHA job][benchmark-gha]
 on 2024-12-20 at 11:57,
@@ -286,34 +286,33 @@ on Linux with 4 CPUs.
 The total is 212095 milliseconds.
 We show only the first 16 most expensive XSL stylesheets.
 
-<!-- benchmark_end -->
+< -- benchmark_end -- >
 
 You can run this benchmark locally with the following commands.
-First, to generate the `measures.csv` file:
+First, to generate the measures.csv file:
 
-```shell
+power shell
 mvn clean install --errors --batch-mode -Deo.xslMeasuresFile=measures.csv
-```
+
 
 Then, to generate the report:
-
-```shell
+power shell
 awk -F ',' '{ a[$1]+=$2; s+=$2; } END { for (k in a) \
  printf("%s.xsl\t%d\t%0.2f%%\n", k, a[k], 100 * a[k]/s)}' \
  eo-runtime/measures.csv | sort -g -k 2 | tail -r | column -t | head "-16"
-```
+ 
 
 ## How to Contribute
 
 Fork repository, make changes, then send us
 a [pull request](https://www.yegor256.com/2014/04/15/github-guidelines.html).
-We will review your changes and apply them to the `master` branch shortly,
+We will review your changes and apply them to the master branch shortly,
 provided they don't violate our quality standards. To avoid frustration,
 before sending us your pull request please run full Maven build:
 
-```bash
-mvn clean install -Pqulice
-```
+bash
+mvn clean install -security
+
 
 You will need [Maven 3.3+](https://maven.apache.org) and Java 11+ installed.
 
@@ -324,4 +323,4 @@ to enhance the performance of EO components:
 
 [![YourKit](https://www.yourkit.com/images/yklogo.png)](https://www.yourkit.com)
 
-[benchmark-gha]: https://github.com/objectionary/eo/actions/runs/12430775512
+[benchmark-sha256] https://github.com/objectionary/eo/actions/runs/12430775512
